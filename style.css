@@ -20,13 +20,11 @@
 }
 
 /*========= レイアウトのためのCSS ===============*/
-
 h1 {
     font-size: 1.2rem;
 }
 
 #page-title {
-    display: inline;
     margin-right: auto;
 }
 
@@ -66,7 +64,7 @@ section:nth-child(2n) {
 }
 
 #page-link {
-    display: inline-flex;
+    display: flex;
     justify-content: flex-end;
     padding-right: 50px;
 }
@@ -91,4 +89,8 @@ section:nth-child(2n) {
 #footer {
     position: relative;
     z-index: 2;
+}
+
+#myphoto {
+    width: 25%;
 }

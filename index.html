@@ -8,20 +8,40 @@
     <title>Furi's Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <!--jQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+    <!--p5.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
+        integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
 </head>
 
 <body>
-    <header id="header">
-        <h1 id="page-title">Tomoki Furihara</h1>
-        <ul id="page-link">
-            <li><a href="#area-1">Area1</a></li>
-            <li><a href="#area-2">Area2</a></li>
-            <li><a href="#area-3">Area3</a></li>
-        </ul>
+    <header>
+        <div id="header">
+            <h1 id="page-title">Tomoki Furihara</h1>
+            <ul id="page-link">
+                <li><a href="#area-1">Area1</a></li>
+                <li><a href="#area-2">Area2</a></li>
+                <li><a href="#area-3">Area3</a></li>
+            </ul>
+        </div>
+        <div id="canvas"></div>
     </header>
+
+    <main>
+        <section class="area" id="area-1">
+            <h2>a</h2>
+            <div id="picture">
+                <img src="https://i.imgur.com/gZHuxky.jpg" alt="プロフィール写真" id="myphoto">
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/processing.js"></script>
 </body>
 
 </html>
