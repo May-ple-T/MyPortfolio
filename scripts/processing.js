@@ -5,14 +5,15 @@ let sh_stars = new Array(30);
 let far_stars = new Array(5000);
 
 function windowResized() {
-    resizeCanvas(windowWidth, 200);//3Dの場合は引数にWEBGLを忘れずに！
+    resizeCanvas(windowWidth, displayHeight);//3Dの場合は引数にWEBGLを忘れずに！
     background(0);//再描画後に背景を再描画する
 }
 
 function setup() {
-    let canvas = createCanvas(windowWidth, 200);
+    let canvas = createCanvas(windowWidth, displayHeight);
     //createCanvas(windowWidth, 200);
     canvas.parent(p5js);  //canvasを指定した要素の子要素にする
+    canvas.style("vertical-align", "bottom")
 
     for (let i = 0; i < stars.length; i++) {
         stars[i] = new Star(0.1);
@@ -43,8 +44,8 @@ function draw() {
 
 class Star {
     constructor(speed) {
-        this.x = random(-width, width);
-        this.y = random(-height, height);
+        this.x = random(-width * 2, width * 2);
+        this.y = random(-height * 2, height * 2);
         this.z = random(width);
         this.s = speed;
 
@@ -81,8 +82,8 @@ class Star {
 
 class Far_star {
     constructor() {
-        this.x = random(-width, width);
-        this.y = random(-height, height);
+        this.x = random(-width * 2, width * 2);
+        this.y = random(-height * 2, height * 2);
 
         this.r = random(2);
         this.s_color = random(192, 256);
@@ -98,8 +99,8 @@ class Far_star {
 
 class Sh_star {
     constructor(speed) {
-        this.x = random(-width, width);
-        this.y = random(-height, height);
+        this.x = random(-width * 2, width * 2);
+        this.y = random(-height * 2, height * 2);
         this.s = speed;
 
         this.move_x = random(-5, 5);

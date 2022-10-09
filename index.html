@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furi's Portfolio</title>
 
+    <!--Silkscreenフォント，Noto Sans Japaneseフォントを導入-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Silkscreen&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <!--jQuery-->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
@@ -24,8 +30,8 @@
         <div id="header">
             <h1 id="page-title">Tomoki Furihara</h1>
             <ul id="page-link">
-                <li><a href="#area-1">Area1</a></li>
-                <li><a href="#area-2">Area2</a></li>
+                <li><a href="#area-1">Profile</a></li>
+                <li><a href="#area-2">Study</a></li>
                 <li><a href="#area-3">Area3</a></li>
             </ul>
         </div>
@@ -34,14 +40,40 @@
 
     <main>
         <section class="area" id="area-1">
-            <h2>a</h2>
-            <div id="picture">
-                <img src="https://i.imgur.com/gZHuxky.jpg" alt="プロフィール写真" id="myphoto">
+            <h2>プロフィール</h2>
+            <div id="profile">
+                <div id="picture">
+                    <img src="https://i.imgur.com/gZHuxky.jpg" alt="プロフィール写真" id="myphoto">
+                </div>
+                <ul id="status">
+                    <li><img src="images/person.png" class="icon"> 振原 知希（フリハラ トモキ）</li>
+                    <li><img src="images/cake.png" class="icon"> 1999/05/15</li>
+                    <li><img src="images/AcademicHut.png" class="icon"> <a href="https://miyashita.com/" target="_blank"
+                            rel="noreferrer noopener" class="linkstyle">Miyashita Lab</a></li>
+                    <li><img src="images/mail.png" class="icon"> <a href="mailto:t.meiji.frt@gmail.com"
+                            class="linkstyle">t.meiji.frt@gmail.com</a></li>
+                    <li><img src="images/GitHub.png" class="icon"> <a href="https://github.com/May-ple-T"
+                            target="_blank" rel="noreferrer noopener" class="linkstyle">May-ple-T</a></li>
+                </ul>
             </div>
+        </section>
+        <section class="area" id="area-2">
+            <h2>研究活動</h2>
+            <ul id="studyul">
+                <li>研究分野：HCI, BCI, VR</li>
+                <li>研究発表
+                    <ol>
+                        <li><a href="https://research.miyashita.com/papers/D250" target="_blank"
+                                rel="noreferrer noopener" class="linkstyle">SSVEPベースのBCIにおけるフリッカ刺激の数と大きさの影響</a></li>
+                    </ol>
+                </li>
+
+            </ul>
         </section>
     </main>
 
     <script src="scripts/processing.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
