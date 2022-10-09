@@ -11,7 +11,8 @@
     /*headerの高さを指定*/
     width: 100%;
     /*position:fixed;にしたため、横幅100%を設定*/
-    background: #333;
+    /*background: #333;*/
+    background: #4b0082;
     color: #fff;
     text-align: left;
     margin-bottom: 0;
@@ -142,12 +143,110 @@ img.icon {
     height: 1.8rem;
 }
 
-#studyul {
+#study-ul {
     font-size: 1.4rem;
     line-height: 3em;
+}
+
+#study-ul li {
+    list-style: none;
+}
+
+#study-ul li::before {
+    content: '▶';
+    font-size: 1.2rem;
+    padding: 0 10px 0 0;
+    color: #ccc;
 }
 
 #footer {
     position: relative;
     z-index: 2;
+}
+
+#page-top a {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+}
+
+#page-top a img {
+    width: 100%;
+    height: auto;
+}
+
+#page-top a p {
+    margin: auto;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
+#page-top.OverMove {
+    animation: OverAnime 1.0s forwards;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+@keyframes OverAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-100vh);
+    }
 }
