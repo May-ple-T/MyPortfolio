@@ -1,7 +1,7 @@
 let p5js = document.getElementById('canvas');
 
 let stars = new Array(2000);
-let sh_stars = new Array(30);
+let sh_stars = new Array(50);
 let far_stars = new Array(5000);
 
 function windowResized() {
