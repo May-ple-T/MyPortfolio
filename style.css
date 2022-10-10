@@ -148,15 +148,24 @@ img.icon {
     line-height: 3em;
 }
 
-#study-ul li {
-    list-style: none;
-}
-
-#study-ul li::before {
+.triangle-li-style li::before {
     content: '▶';
     font-size: 1.2rem;
     padding: 0 10px 0 0;
     color: #ccc;
+}
+
+#study-ul li {
+    list-style: none;
+}
+
+#lang-img {
+    display: flex;
+    justify-content: space-around;
+}
+
+#lang-img li {
+    list-style: none;
 }
 
 #footer {
