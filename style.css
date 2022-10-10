@@ -71,7 +71,7 @@ small {
 }
 
 section {
-    padding: 30px;
+    padding: 30px 15%;
 }
 
 section:nth-child(2n) {
@@ -116,8 +116,8 @@ section:nth-child(2n+1) {
 }
 
 #picture {
-    width: 25%;
-    padding-right: 50px;
+    width: 350px;
+    padding-right: 10%;
 }
 
 #myphoto {
