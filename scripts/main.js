@@ -1,3 +1,24 @@
+var l_props = {
+    "display": "flex",
+    "justify-content": "center"
+}
+
+var s_props = {
+    "display": "block"
+}
+
+$(window).resize(() => {
+    var windowWidth = $(window).width();
+    if (windowWidth > 850) {
+        $('#profile').css(l_props);
+        $('#picture').css('padding-right', '10%');
+    }
+    else {
+        $('#profile').css(s_props);
+        $('#picture').css('padding-right', '0');
+    }
+})
+
 $('#page-link a[href*="#"]').click(function () {
     var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
     console.log(elmHash);

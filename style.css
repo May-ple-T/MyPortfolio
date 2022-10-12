@@ -116,8 +116,10 @@ section:nth-child(2n+1) {
 }
 
 #picture {
-    width: 350px;
-    padding-right: 10%;
+    width: 50%;
+    /* padding-right: 10%; */
+    text-align: center;
+    margin: 0 auto;
 }
 
 #myphoto {
@@ -157,6 +159,11 @@ img.icon {
 
 #study-ul li {
     list-style: none;
+}
+
+#text-omoni {
+    border: 2rem 0 2.5rem 0;
+    font-size: 1.2rem;
 }
 
 #lang-img {
