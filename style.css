@@ -111,12 +111,19 @@ section:nth-child(2n+1) {
 }
 
 #profile {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
+    display: grid;
+    /* grid-auto-rows: 5em; */
+    grid-gap: 10px;
+    padding: 0;
+    margin: 1em 0 2em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 #picture {
-    width: 50%;
+    width: 100%;
     /* padding-right: 10%; */
     text-align: center;
     margin: 0 auto;
@@ -134,6 +141,11 @@ section:nth-child(2n+1) {
 
 #status li {
     list-style: none;
+}
+
+#school-info {
+    font-size: 0.8em;
+    line-height: 2em;
 }
 
 a.linkstyle {
@@ -173,6 +185,13 @@ img.icon {
 
 #lang-img li {
     list-style: none;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 180px 100px 80px 120px auto;
 }
 
 #footer {
