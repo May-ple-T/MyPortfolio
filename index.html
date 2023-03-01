@@ -19,89 +19,94 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
         </script>
     <!--p5.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"
         integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-        </script>
+        </script> -->
+    <!--particle.js-->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-    <header>
-        <div id="header">
-            <h1 id="page-title">Tomoki Furihara</h1>
-            <ul id="page-link">
-                <li><a href="#area-1">Profile</a></li>
-                <li><a href="#area-2">Study</a></li>
-                <li><a href="#area-3">Works</a></li>
-            </ul>
-        </div>
-        <div id="canvas"></div>
-    </header>
-
-    <main>
-        <section class="area" id="area-1">
-            <h2>プロフィール</h2>
-            <div id="profile">
-                <div id="picture">
-                    <img src="https://i.imgur.com/gZHuxky.jpg" alt="プロフィール写真" id="myphoto">
-                </div>
-                <ul id="status">
-                    <li><img src="images/person.png" class="icon"> 振原 知希（フリハラ トモキ）</li>
-                    <li><img src="images/cake.png" class="icon"> 1999/05/15</li>
-                    <li><img src="images/school.png" class="icon"> 明治大学大学院</li>
-                    <ul id="school-info">
-                        <li>先端数理科学研究科</li>
-                        <li>先端メディアサイエンス専攻</li>
-                    </ul>
-                    <li><img src="images/AcademicHut.png" class="icon"> <a href="https://miyashita.com/" target="_blank"
-                            rel="noreferrer noopener" class="linkstyle">Miyashita Lab</a></li>
-                    <li><img src="images/mail.png" class="icon"> <a href="mailto:t.meiji.frt@gmail.com"
-                            class="linkstyle">t.meiji.frt@gmail.com</a></li>
-                    <li><img src="images/GitHub.png" class="icon"> <a href="https://github.com/May-ple-T"
-                            target="_blank" rel="noreferrer noopener" class="linkstyle">May-ple-T</a></li>
+    <div id="particles-js"></div>
+    <div id="wrapper">
+        <header>
+            <div id="header">
+                <h1 id="page-title">Tomoki Furihara</h1>
+                <ul id="page-link">
+                    <li><a href="#area-1">Profile</a></li>
+                    <li><a href="#area-2">Study</a></li>
+                    <li><a href="#area-3">Works</a></li>
                 </ul>
             </div>
-            <p id="text-omoni">主に使う言語</p>
-            <ul id="lang-img">
-                <li><img src="images/unity.svg" alt="" width="100" height="100"></li>
-                <li><img src="images/processing.svg" alt="" width="100" height="100"></li>
-                <li><img src="images/icons8-matlab.svg" alt="" width="100" height="100"></li>
-                <li><img src="images/javascript.svg" alt="" width="100" height="100"></li>
-                <li><img src="images/python.svg" alt="" width="100" height="100"></li>
-            </ul>
-        </section>
+            <!-- <div id="canvas"></div> -->
+        </header>
 
-        <section class="area" id="area-2">
-            <h2>研究活動</h2>
-            <ul id="study-ul" class="triangle-li-style">
-                <li>研究分野：HCI, BCI, VR</li>
-                <li>研究発表
-                    <ol>
-                        <li><a href="https://research.miyashita.com/papers/D250" target="_blank"
-                                rel="noreferrer noopener"
-                                class="linkstyle">振原知希，宮下芳明．SSVEPベースのBCIにおけるフリッカ刺激の数と大きさの影響，インタラクション2022，pp.767-772，2022．</a>
-                        </li>
-                    </ol>
-                </li>
-            </ul>
-        </section>
+        <main>
+            <section class="area" id="area-1">
+                <h2>プロフィール</h2>
+                <div id="profile">
+                    <div id="picture">
+                        <img src="https://i.imgur.com/gZHuxky.jpg" alt="プロフィール写真" id="myphoto">
+                    </div>
+                    <ul id="status">
+                        <li><img src="images/person.png" class="icon"> 振原 知希（フリハラ トモキ）</li>
+                        <li><img src="images/cake.png" class="icon"> 1999/05/15</li>
+                        <li><img src="images/school.png" class="icon"> 明治大学大学院</li>
+                        <ul id="school-info">
+                            <li>先端数理科学研究科</li>
+                            <li>先端メディアサイエンス専攻</li>
+                        </ul>
+                        <li><img src="images/AcademicHut.png" class="icon"> <a href="https://miyashita.com/"
+                                target="_blank" rel="noreferrer noopener" class="linkstyle">Miyashita Lab</a></li>
+                        <li><img src="images/mail.png" class="icon"> <a href="mailto:t.meiji.frt@gmail.com"
+                                class="linkstyle">t.meiji.frt@gmail.com</a></li>
+                        <li><img src="images/GitHub.png" class="icon"> <a href="https://github.com/May-ple-T"
+                                target="_blank" rel="noreferrer noopener" class="linkstyle">May-ple-T</a></li>
+                    </ul>
+                </div>
+                <p id="text-omoni">主に使う言語</p>
+                <ul id="lang-img">
+                    <li><img src="images/unity.svg" alt="" width="100" height="100"></li>
+                    <li><img src="images/processing.svg" alt="" width="100" height="100"></li>
+                    <li><img src="images/icons8-matlab.svg" alt="" width="100" height="100"></li>
+                    <li><img src="images/javascript.svg" alt="" width="100" height="100"></li>
+                    <li><img src="images/python.svg" alt="" width="100" height="100"></li>
+                </ul>
+            </section>
 
-        <section class="area" id="area-3">
-            <h2>作品</h2>
+            <section class="area" id="area-2">
+                <h2>研究活動</h2>
+                <ul id="study-ul" class="triangle-li-style">
+                    <li>研究分野：HCI, BCI, VR</li>
+                    <li>研究発表
+                        <ol>
+                            <li><a href="https://research.miyashita.com/papers/D250" target="_blank"
+                                    rel="noreferrer noopener"
+                                    class="linkstyle">振原知希，宮下芳明．SSVEPベースのBCIにおけるフリッカ刺激の数と大きさの影響，インタラクション2022，pp.767-772，2022．</a>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </section>
 
-        </section>
-    </main>
+            <section class="area" id="area-3">
+                <h2>作品</h2>
 
-    <footer id="footer">
-        <div id="page-top"><a href="#">
-                <img src="images/rocket.png">
-                <p>Page Top</p>
-            </a></div>
-        <!-- <small>&copy; copyright.</small> -->
-    </footer>
+            </section>
+        </main>
 
-    <script src="scripts/processing.js"></script>
+        <footer id="footer">
+            <div id="page-top"><a href="#">
+                    <img src="images/rocket.png">
+                    <p>Page Top</p>
+                </a></div>
+            <!-- <small>&copy; copyright.</small> -->
+        </footer>
+    </div>
+    <!-- <script src="scripts/processing.js"></script> -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/bg.js"></script>
 </body>
 
 </html>

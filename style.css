@@ -1,18 +1,21 @@
 @charset "utf-8";
 
 /*========= ヘッダー追従のためのCSS ===============*/
-
-#header {
-    position: fixed;
+header {
+    position: sticky;
     /*追従ナビのためpositionをfixedにする*/
     top: 0;
     /*ポジション設定topを0*/
-    height: inherit;
+    z-index: 1;
+}
+
+#header {
+    height: auto;
     /*headerの高さを指定*/
     width: 100%;
     /*position:fixed;にしたため、横幅100%を設定*/
-    /*background: #333;*/
-    background: #4b0082;
+    background: #333;
+    /* background: #4b0082; */
     color: #fff;
     text-align: left;
     margin-bottom: 0;
@@ -25,7 +28,7 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
     color: #fff;
     font-family: 'Noto Sans JP', sans-serif;
@@ -75,11 +78,11 @@ section {
 }
 
 section:nth-child(2n) {
-    background: #0f0f0f;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 section:nth-child(2n+1) {
-    background: #080808;
+    background: rgba(255, 255, 255, 0.25);
 }
 
 #page-link {
@@ -118,7 +121,7 @@ section:nth-child(2n+1) {
     grid-gap: 10px;
     padding: 0;
     margin: 1em 0 2em;
-    overflow: hidden;
+    /* overflow: hidden; */
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
@@ -284,4 +287,34 @@ img.icon {
         opacity: 1;
         transform: translateY(-100vh);
     }
+}
+
+/*========= particle js を描画するエリア設定 ===============*/
+
+html,
+body {
+    height: 100%;
+    /*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js {
+    position: fixed;
+    /*描画固定*/
+    z-index: -1;
+    /*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+    background-color: #080808;
+    /*背景色*/
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 0;
+    /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+    width: 100%;
+    height: auto;
 }
