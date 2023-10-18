@@ -242,17 +242,27 @@ a.linkstyle2 {
 }
 
 #text-omoni {
-    border: 2rem 0 2.5rem 0;
+    margin: 2rem 0 2rem 0;
     font-size: 1.2rem;
 }
 
 #lang-img {
     display: flex;
     justify-content: space-around;
+    padding: 0rem;
 }
 
 #lang-img li {
     list-style: none;
+}
+
+img.lang-icon {
+    max-width: 100px;
+    min-width: 20px;
+    max-height: 100px;
+    min-height: 20px;
+    width: 75%;
+    height: 75%;
 }
 
 .grid-container {
