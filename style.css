@@ -146,9 +146,27 @@ section:nth-child(2n+1) {
     list-style: none;
 }
 
+#status li:first-child {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+#status li+li {
+    border-bottom: 1px solid #666;
+}
+
 #school-info {
     font-size: 0.8em;
     line-height: 2em;
+}
+
+#school-info li:first-child {
+    border-top: none;
+    border-bottom: 1px solid #666;
+}
+
+#school-info li+li {
+    border-bottom: none;
 }
 
 a.linkstyle {
@@ -178,8 +196,8 @@ img.icon {
     margin-bottom: 1rem;
 }
 
-#before-ol+#study-ol {
-    margin-top: 2rem;
+#study-ol {
+    margin-top: 0.5rem;
 }
 
 .default-li-style li::before {
@@ -203,7 +221,19 @@ img.icon {
 #study-ol li {
     padding-left: 1.5em;
     text-indent: -1.5em;
-    /* line-height: 2em; */
+    line-height: 1.5em;
+    padding-top: 0.5rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0.5rem;
+}
+
+#study-ol li:first-child {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+
+#study-ol li+li {
+    border-bottom: 1px solid #666;
 }
 
 a.linkstyle2 {
